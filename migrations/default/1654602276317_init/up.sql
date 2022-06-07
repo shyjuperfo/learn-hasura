@@ -7,7 +7,8 @@ CREATE TABLE public."user" (
     lastname text NOT NULL,
     telephone bigint NOT NULL,
     "createdAt" timestamp with time zone DEFAULT now() NOT NULL,
-    "modifiedAt" timestamp with time zone DEFAULT now() NOT NULL
+    "modifiedAt" timestamp with time zone DEFAULT now() NOT NULL,
+    dob timestamp with time zone
 );
 CREATE TABLE public.user_address (
     id uuid DEFAULT gen_random_uuid() NOT NULL,

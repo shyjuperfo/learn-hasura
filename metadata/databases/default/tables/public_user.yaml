@@ -1,0 +1,18 @@
+table:
+  schema: public
+  name: user
+array_relationships:
+  - name: user_addresses
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          schema: public
+          name: user_address
+  - name: user_payments
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          schema: public
+          name: user_payment
